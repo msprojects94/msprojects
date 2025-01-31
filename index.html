@@ -13,6 +13,7 @@
             color: #ffffff;
             line-height: 1.6;
             text-align: center;
+            scroll-behavior: smooth;
         }
         h1, h2, h3 {
             color: #ff9800;
@@ -22,7 +23,13 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .author-photo, .ebook-cover {
+        .author-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .ebook-cover {
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
@@ -49,7 +56,21 @@
             border-radius: 5px;
             margin: 10px 0;
         }
+        .more-details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
     </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -60,12 +81,23 @@
         
         <h2>Por Que Este Livro é Para Você?</h2>
         <p>Se você já perdeu dinheiro, tempo e relacionamentos por causa das apostas, é hora de mudar. Neste livro, você aprenderá:</p>
-        <ul>
-            <li>Como entender o sistema das apostas e não cair mais na armadilha</li>
-            <li>Os impactos emocionais e espirituais do vício</li>
-            <li>Estratégias práticas para vencer a compulsão</li>
-            <li>Como reconstruir sua vida financeira e emocional</li>
-        </ul>
+        <p>Como entender o sistema das apostas e não cair mais na armadilha.</p>
+        <p>Os impactos emocionais e espirituais do vício.</p>
+        <p>Estratégias práticas para vencer a compulsão.</p>
+        <p>Como reconstruir sua vida financeira e emocional.</p>
+        
+        <h2>Sumário</h2>
+        <button class="cta-button" onclick="toggleDetails('summary-details')">Ver Sumário</button>
+        <div id="summary-details" class="more-details">
+            <p>1. A Armadilha Dourada: Entendendo o Sistema</p>
+            <p>2. O Ciclo do Vício: Anatomia de uma Dependência</p>
+            <p>3. Reconhecendo o Problema</p>
+            <p>4. O Caminho da Recuperação</p>
+            <p>5. Estratégias Práticas de Libertação</p>
+            <p>6. A Jornada Espiritual</p>
+            <p>7. Reconstruindo sua Vida</p>
+            <p>8. Mantendo-se no Caminho</p>
+        </div>
         
         <h2>Depoimentos de Leitores</h2>
         <div class="testimonial">
@@ -77,8 +109,8 @@
         
         <h2>Invista na Sua Libertação Agora</h2>
         <img src="capa.jpg" alt="Capa do Ebook" class="ebook-cover">
-        <p><strong>De R$ 49,90 por apenas R$ 19,90!</strong></p>
-        <p>Adquira agora e dê o primeiro passo para uma vida livre do vício!</p>
+        <p><strong>De <s>R$ 49,90</s> por apenas R$ 19,90!</strong></p>
+        <p>(Pode ser parcelado em 2x de R$ 10,38)</p>
         <a href="https://pay.hotmart.com/D96725739O?off=chiqylj5" class="cta-button">Comprar Agora</a>
     </div>
 </body>
