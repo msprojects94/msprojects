@@ -6,48 +6,30 @@
     <title>Liberte-se das Apostas - Supere o Vício e Reconstrua sua Vida</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
+            background-color: #121212;
             color: #ffffff;
             line-height: 1.6;
+            text-align: center;
         }
         h1, h2, h3 {
-            color: #e67e22;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ff9800;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-        .section {
-            margin-bottom: 60px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .author-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 4px solid #e67e22;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        .ebook-cover {
-            width: 300px;
-            margin-bottom: 20px;
+        .author-photo, .ebook-cover {
+            width: 100%;
+            max-width: 300px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         .cta-button {
-            background-color: #e67e22;
+            background-color: #ff9800;
             color: white;
             padding: 15px 30px;
             font-size: 20px;
@@ -55,161 +37,49 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            margin-top: 20px;
         }
         .cta-button:hover {
-            background-color: #d35400;
+            background-color: #e68900;
         }
         .testimonial {
-            margin-top: 40px;
-            font-style: italic;
-            color: #cccccc;
-        }
-        .more-details {
-            display: none;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Seção 1: Introdução -->
-        <section class="section">
-            <h1>Liberte-se das Apostas: Um Guia Prático para Superar Vícios</h1>
-            <img src="perfil.jpg" alt="Foto do Autor" class="author-photo">
-            <p>Se você está aqui, é porque sabe o que é lutar contra o vício em jogos de azar. Eu sou Mário Schenkel e, como você, passei por dias sombrios. Mas também sei que existe esperança. Este livro não é apenas uma leitura; é um convite à transformação.</p>
-        </section>
-
-        <!-- Seção 2: História -->
-        <section class="section">
-            <h2>A Minha Luta e a Sua Possibilidade de Vitória</h2>
-            <p>Eu perdi muito: dinheiro, relacionamentos e a minha dignidade. Mas não desisti. Com fé e apoio, consegui me libertar. Se eu consegui, você também pode. Este guia não é uma solução mágica, mas um caminho com passos práticos que, se seguidos, podem levar à sua recuperação.</p>
-            <button class="cta-button" onclick="toggleDetails('history-details')">Ver Mais</button>
-            <div id="history-details" class="more-details">
-                <p>Aqui compartilho detalhes sobre a minha jornada, os desafios, e as estratégias que funcionaram para mim. Você não está sozinho nessa luta.</p>
-            </div>
-        </section>
-
-        <!-- Seção 3: O que Você Vai Aprender -->
-        <section class="section">
-            <h2>O Que Você Vai Aprender</h2>
-            <p>Este livro oferece insights práticos baseados em psicologia, neurociência e fé. Você aprenderá:</p>
-            <ul>
-                <li>Como identificar e controlar seus impulsos.</li>
-                <li>Estratégias eficazes para lidar com recaídas.</li>
-                <li>Como reconstruir sua vida financeira e emocional.</li>
-                <li>Onde procurar ajuda e apoio contínuo.</li>
-            </ul>
-        </section>
-
-        <!-- Seção 4: Sumário do Livro -->
-        <section class="section">
-            <h2>O Que Você Encontrará Neste Livro</h2>
-            <button class="cta-button" onclick="toggleDetails('summary-details')">Ver Sumário</button>
-            <div id="summary-details" class="more-details">
-                <p>Este guia é estruturado para fornecer um caminho claro e prático para a superação do vício em apostas. Aqui está um resumo do que você encontrará:</p>
-                <ol>
-                    <li><strong>A Armadilha Dourada: Entendendo o Sistema</strong></li>
-                    <li><strong>O Ciclo do Vício: Anatomia de uma Dependência</strong>
-                        <ul>
-                            <li>A Psicologia dos Cassinos</li>
-                            <li>Como Seu Cérebro Processa o Jogo</li>
-                            <li>Por Que a Casa Sempre Ganha</li>
-                            <li>O Papel da Dopamina</li>
-                            <li>Gatilhos Emocionais e Manipulação</li>
-                            <li>Padrões Comportamentais e Gatilhos</li>
-                        </ul>
-                    </li>
-                    <li><strong>Reconhecendo o Problema</strong></li>
-                    <li><strong>O Caminho da Recuperação</strong>
-                        <ul>
-                            <li>Sinais de Alerta</li>
-                            <li>Aceitando a Ajuda</li>
-                            <li>O Momento da Verdade</li>
-                            <li>O Papel da Fé na Recuperação</li>
-                            <li>O Impacto Espiritual</li>
-                            <li>Construindo um Sistema de Suporte</li>
-                            <li>As Primeiras Etapas da Reconstrução</li>
-                            <li>A Jornada Continua</li>
-                        </ul>
-                    </li>
-                    <li><strong>Estratégias Práticas de Libertação</strong></li>
-                    <li><strong>A Jornada Espiritual</strong>
-                        <ul>
-                            <li>Preenchendo o Tempo com o que Edifica</li>
-                            <li>O Despertar com a Palavra</li>
-                            <li>Honestidade Radical</li>
-                            <li>Renovando a Mente</li>
-                            <li>Barreiras Práticas</li>
-                            <li>Servindo ao Próximo</li>
-                            <li>O Poder do Suporte</li>
-                            <li>Lidando com a Culpa e a Vergonha</li>
-                            <li>Criando uma Vida Nova</li>
-                            <li>Crescendo na Comunhão</li>
-                        </ul>
-                    </li>
-                    <li><strong>Reconstruindo sua Vida</strong></li>
-                    <li><strong>Mantendo-se no Caminho</strong>
-                        <ul>
-                            <li>Reparando Relacionamentos</li>
-                            <li>Estratégias de Longo Prazo</li>
-                            <li>Reconstruindo a Estabilidade Financeira</li>
-                            <li>Lidando com Tentações</li>
-                            <li>Desenvolvendo Novos Propósitos</li>
-                            <li>Construindo um Futuro Sólido</li>
-                        </ul>
-                    </li>
-                </ol>
-                <p>Cada capítulo é projetado para guiá-lo na jornada de recuperação, oferecendo não apenas informações, mas também ferramentas práticas para transformar a sua vida.</p>
-            </div>
-        </section>
-
-        <!-- Seção 5: Testemunhos -->
-        <section class="section">
-            <h2>O Que Dizem os Leitores</h2>
-            <div class="testimonial">
-                <p>"Este livro mudou minha vida. A história do Mário é inspiradora e as estratégias são práticas e eficazes." - Ana S.</p>
-            </div>
-            <div class="testimonial">
-                <p>"Recomendo a todos que estão lutando contra o vício. Este livro é um guia completo para a libertação." - João M.</p>
-            </div>
-        </section>
-
-        <!-- Seção 6: Call to Action -->
-        <section class="section">
-            <h2>Adquira Agora o Seu Exemplar</h2>
-            <img src="capa.jpg" alt="Capa do Ebook" class="ebook-cover">
-            <p><strong>Preço: R$ 19,90 (ou 2x de R$ 10,38)</strong></p>
-            <p>Não deixe para amanhã o que pode mudar sua vida hoje. Lembre-se, este livro é uma ferramenta, mas a verdadeira transformação vem de seguir os passos e buscar apoio. Com comprometimento, a vitória é certa!</p>
-            <a href="https://pay.hotmart.com/D96725739O?off=chiqylj5" target="_self" class="cta-button">Comprar Agora</a>
-        </section>
+        <h1>Liberte-se das Apostas</h1>
+        <h2>Um Guia Prático para Superar Vícios e Reconstruir sua Vida</h2>
+        <img src="perfil.jpg" alt="Foto do Autor" class="author-photo">
+        <p>Eu sou Mário Schenkel, e sei exatamente como é a luta contra o vício em apostas. Mas também sei que há uma saída! Este livro é mais do que um guia – é um caminho para sua libertação e reconstrução.</p>
+        
+        <h2>Por Que Este Livro é Para Você?</h2>
+        <p>Se você já perdeu dinheiro, tempo e relacionamentos por causa das apostas, é hora de mudar. Neste livro, você aprenderá:</p>
+        <ul>
+            <li>Como entender o sistema das apostas e não cair mais na armadilha</li>
+            <li>Os impactos emocionais e espirituais do vício</li>
+            <li>Estratégias práticas para vencer a compulsão</li>
+            <li>Como reconstruir sua vida financeira e emocional</li>
+        </ul>
+        
+        <h2>Depoimentos de Leitores</h2>
+        <div class="testimonial">
+            <p>"Este livro salvou minha vida! Pela primeira vez, me senti compreendido e encontrei um caminho para a recuperação." - Ana S.</p>
+        </div>
+        <div class="testimonial">
+            <p>"Simplesmente essencial para quem quer se libertar do vício. Mário fala com autoridade porque viveu essa luta!" - João M.</p>
+        </div>
+        
+        <h2>Invista na Sua Libertação Agora</h2>
+        <img src="capa.jpg" alt="Capa do Ebook" class="ebook-cover">
+        <p><strong>De R$ 49,90 por apenas R$ 19,90!</strong></p>
+        <p>Adquira agora e dê o primeiro passo para uma vida livre do vício!</p>
+        <a href="https://pay.hotmart.com/D96725739O?off=chiqylj5" class="cta-button">Comprar Agora</a>
     </div>
-
-    <script>
-        // Animações ao rolar a página
-        const sections = document.querySelectorAll('.section');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Função para exibir/ocultar detalhes
-        function toggleDetails(id) {
-            const details = document.getElementById(id);
-            details.style.display = details.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
 </body>
 </html>
