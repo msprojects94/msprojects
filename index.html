@@ -11,21 +11,25 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            text-align: center;
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
+        .section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         .author-photo {
             width: 150px;
@@ -36,6 +40,8 @@
         .ebook-cover {
             width: 300px;
             margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .cta-button {
             background-color: #e67e22;
@@ -55,21 +61,90 @@
             font-style: italic;
             color: #666;
         }
+        .more-details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Liberte-se das Apostas: Um Guia Prático para Superar Vícios</h1>
-        <img src="perfil.jpg" alt="Foto do Autor" class="author-photo">
-        <p>Este livro é mais do que um guia. É a minha história pessoal de superação do vício em jogos de azar. Eu, Mário Schenkel, compartilho minha jornada de dor, luta e, finalmente, libertação.</p>
-        <img src="capa.jpg" alt="Capa do Ebook" class="ebook-cover">
-        <p>Com insights baseados em psicologia, neurociência e minha fé em Cristo, este livro oferece estratégias práticas para ajudar você a vencer o vício e reconstruir sua vida.</p>
-        <p><strong>Preço: R$ 19,90 (parcelado em até 2x)</strong></p>
-        <a onclick="return false;" href="https://pay.hotmart.com/D96725739O?checkoutMode=2&off=chiqylj5" class="cta-button">Comprar Agora</a>
-        <div class="testimonial">
-            <p>"Este livro mudou minha vida. A história do Mário é inspiradora e as estratégias são práticas e eficazes." - Ana S.</p>
-        </div>
+        <!-- Seção 1: Introdução -->
+        <section class="section">
+            <h1>Liberte-se das Apostas: Um Guia Prático para Superar Vícios</h1>
+            <img src="perfil.jpg" alt="Foto do Autor" class="author-photo">
+            <p>Este livro é mais do que um guia. É a minha história pessoal de superação do vício em jogos de azar. Eu, Mário Schenkel, compartilho minha jornada de dor, luta e, finalmente, libertação.</p>
+        </section>
+
+        <!-- Seção 2: História -->
+        <section class="section">
+            <h2>Minha História</h2>
+            <p>Durante anos, eu fui prisioneiro do vício em jogos de azar. Perdi dinheiro, relacionamentos e minha autoestima. Mas, com determinação e apoio, consegui me libertar e reconstruir minha vida.</p>
+            <button class="cta-button" onclick="toggleDetails('history-details')">Ver Mais</button>
+            <div id="history-details" class="more-details">
+                <p>Aqui você encontrará detalhes sobre minha jornada, os desafios que enfrentei e as estratégias que usei para superar o vício.</p>
+            </div>
+        </section>
+
+        <!-- Seção 3: Benefícios -->
+        <section class="section">
+            <h2>O que Você Vai Aprender</h2>
+            <p>Este livro oferece insights práticos baseados em psicologia, neurociência e minha fé em Cristo. Você aprenderá:</p>
+            <ul>
+                <li>Como identificar e controlar impulsos.</li>
+                <li>Estratégias para lidar com recaídas.</li>
+                <li>Como reconstruir sua vida financeira e emocional.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 4: Testemunhos -->
+        <section class="section">
+            <h2>O que Dizem os Leitores</h2>
+            <div class="testimonial">
+                <p>"Este livro mudou minha vida. A história do Mário é inspiradora e as estratégias são práticas e eficazes." - Ana S.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Recomendo a todos que estão lutando contra o vício. Este livro é um guia completo para a libertação." - João M.</p>
+            </div>
+        </section>
+
+        <!-- Seção 5: Call to Action -->
+        <section class="section">
+            <h2>Adquira Agora o Seu Exemplar</h2>
+            <img src="capa.jpg" alt="Capa do Ebook" class="ebook-cover">
+            <p><strong>Preço: R$ 19,90 (parcelado em até 2x)</strong></p>
+            <a onclick="return false;" href="https://pay.hotmart.com/D96725739O?checkoutMode=2&off=chiqylj5" class="cta-button">Comprar Agora</a>
+        </section>
     </div>
+
+    <script>
+        // Animações ao rolar a página
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Função para exibir/ocultar detalhes
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+    <!-- Hotmart Widget -->
     <script type="text/javascript">
         function importHotmart(){ 
             var imported = document.createElement('script'); 
